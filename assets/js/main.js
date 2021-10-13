@@ -4,20 +4,19 @@ per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di
 */
 
 //inserire titolo
-let h1 = document.createElement("h1")
 const header = document.querySelector("header")
+const h1 = document.createElement("h1")
 h1.append('FizzBuzzDOM')
 header.append(h1)
 
 
-/*//inserire un elemento lista nel DOM
-const ulElement = document.querySelector("main").innerHTML = "<ul></ul>"
-// console.log(ulElement)
+//inserire un elemento <ul> nel main
+const main = document.querySelector("main")
+const ulElement = document.createElement("ul")
 
-//Esegui un ciclo da 1 a 100 e stampa su una <ul> nel DOM
+main.append(ulElement)
+
+//Esegui un ciclo da 1 a 100 e stampa i numeri dentro dei list-item contenuti dentro ulElement
 for (let i = 0; i <= 100; i++){
-    // const liNumber = ulElement.insertAdjacentHTML('afterbegin', `<li>${i}</li>`)
-    const liNumber = `<li>${i}</li>`
-    console.log(liNumber)
+    ulElement.innerHTML += `<li> ${i} </li>`
 }
-*/
