@@ -18,5 +18,19 @@ main.append(ulElement)
 
 //Esegui un ciclo da 1 a 100 e stampa i numeri dentro dei list-item contenuti dentro ulElement
 for (let i = 0; i <= 100; i++){
-    ulElement.innerHTML += `<li> ${i} </li>`
+    if (i % 3 == 0){
+        //se è divisibile per 3
+        ulElement.innerHTML += `<li class="square"> fizz </li>`
+    } else if (i % 5 == 0){
+        //se è divisibile per 5
+        ulElement.innerHTML += `<li class="square"> buzz </li>`
+    } else if (i % 3 == 0 && i % 5 == 0){
+        //se è divisibile per 5 e per 3
+        ulElement.innerHTML += `<li class="square"> fizzbuzz </li>`
+    } else {
+        //se non è divisibile per nessuno dei due
+        ulElement.innerHTML += `<li class="square"> ${i} </li>`
+    }
 }
+
+// if (i)
